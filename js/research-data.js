@@ -22,7 +22,7 @@ const PUBLICATIONS = [
     authors: "Choi, J., & Newman, D. A.",
     venue: "Journal of Applied Psychology (accepted)",
     url: "https://doi.org/10.1037/apl0001426",
-    topics: ["Personnel Selection"]
+    topics: ["Personnel Selection", "Research Methods"]
   },
   {
     year: 2026,
@@ -41,12 +41,12 @@ const PUBLICATIONS = [
     topics: ["Well-Being"]
   },
   {
-    year: 2025,
+    year: 2026,
     title: "The Big Five Inventory-2 in Korea: Validation and Cross-Cultural Comparisons with the U.S. and Chinese Versions",
     authors: "Choi, J., Kim, N., Zhang, B., Park, S., Cho, S., Sohn, Y., Soto, C. J., & John, O. P.",
-    venue: "Assessment (online advance)",
+    venue: "Assessment, 33(5), 866–889",
     url: "https://doi.org/10.1177/10731911251357466",
-    topics: ["Personnel Selection"]
+    topics: ["Personnel Selection", "Research Methods"]
   },
   {
     year: 2025,
@@ -62,7 +62,7 @@ const PUBLICATIONS = [
     authors: "Kim, N., Choi, J., Park, Y., & Sohn, Y.",
     venue: "Journal of Career Assessment, 30(2), 258–284",
     url: "https://doi.org/10.1177/10690727211039957",
-    topics: ["Well-Being"]
+    topics: ["Research Methods", "Well-Being"]
   },
   {
     year: 2021,

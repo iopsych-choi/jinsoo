@@ -8,6 +8,7 @@
   --color-accent: #10243f;   /* 메인 강조색 (남색) */
   --color-accent-light: #eef2f6;
   --color-border: #e3e6ea;
+  --color-keyword: #1d5fd6;  /* 본문 키워드 강조용 선명한 파랑 */
   --max-width: 960px;
   --radius: 8px;
 }
@@ -114,7 +115,7 @@ p { margin: 0 0 14px; }
 
 /* 본문 안의 핵심 키워드 강조 (예: Personnel Selection, Research Methods, Well-Being) */
 main strong {
-  color: var(--color-accent);
+  color: var(--color-keyword);
 }
 
 .interest-list {

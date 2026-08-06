@@ -1,0 +1,365 @@
+/* =========================================
+   기본 변수 (색상 등은 여기서 쉽게 바꿀 수 있어요)
+   ========================================= */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1c1e21;
+  --color-muted: #5b6472;
+  --color-accent: #10243f;   /* 메인 강조색 (남색) */
+  --color-accent-light: #eef2f6;
+  --color-border: #e3e6ea;
+  --max-width: 960px;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Helvetica Neue", Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+a { color: var(--color-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+/* ---------- 헤더 / 네비게이션 ---------- */
+header.site-header {
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+}
+
+.nav-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.site-brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-accent);
+}
+.site-brand:hover { text-decoration: none; }
+
+nav.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav.main-nav a {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+nav.main-nav a:hover,
+nav.main-nav a.active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* ---------- 메인 콘텐츠 ---------- */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.page-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  margin-bottom: 4px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 20px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 40px 0 12px;
+  color: var(--color-accent);
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 24px 0 8px;
+}
+
+p { margin: 0 0 14px; }
+
+/* 본문 안의 핵심 키워드 강조 (예: Personnel Selection, Research Methods, Well-Being) */
+main strong {
+  color: var(--color-accent);
+}
+
+.interest-list {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+.interest-list li {
+  margin-bottom: 14px;
+}
+
+/* ---------- 히어로 (홈페이지 소개) ---------- */
+.hero {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0 10px;
+}
+
+.hero img.profile-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--color-accent-light);
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .hero img.profile-photo {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+.hero-text h1 { margin-bottom: 6px; }
+.hero-text .subtitle { color: var(--color-muted); margin-bottom: 12px; }
+
+.contact-line {
+  margin: 4px 0 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ---------- 카드 / 리스트 공통 ---------- */
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  margin: 0 6px 6px 0;
+}
+
+/* ---------- Research 필터 UI ---------- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--color-accent-light);
+  border-radius: var(--radius);
+}
+
+.filter-bar input[type="search"] {
+  flex: 1;
+  min-width: 180px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+}
+
+.filter-bar select {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  background: white;
+}
+
+.topic-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.topic-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: white;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.topic-btn:hover { border-color: var(--color-accent); }
+
+.topic-btn.active {
+  background: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+}
+
+.pub-item {
+  border-bottom: 1px solid var(--color-border);
+  padding: 16px 0;
+}
+.pub-item:last-child { border-bottom: none; }
+
+.pub-title { font-weight: 600; margin-bottom: 4px; }
+.pub-meta { color: var(--color-muted); font-size: 0.9rem; }
+.pub-year-badge {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-right: 10px;
+}
+
+.empty-state {
+  color: var(--color-muted);
+  padding: 30px 0;
+  text-align: center;
+}
+
+.show-more-btn {
+  display: block;
+  margin: 4px 0 20px;
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: white;
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  cursor: pointer;
+}
+.show-more-btn:hover { border-color: var(--color-accent); }
+
+/* ---------- People / Teaching 그리드 ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.person-card { text-align: left; }
+.person-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--color-accent-light);
+  margin-bottom: 8px;
+}
+.person-card .name { font-weight: 600; }
+.person-card .role { color: var(--color-muted); font-size: 0.9rem; }
+
+/* ---------- 스냅샷(그룹 사진) 갤러리 ---------- */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+.photo-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+}
+.photo-card .caption {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* Wide group shots (e.g. a lineup of several people) — don't crop the sides */
+.photo-card-wide {
+  grid-column: 1 / -1;
+}
+.photo-card-wide img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: var(--color-accent-light);
+}
+
+/* Fixed 3-per-row gallery (e.g. UIUC Family) */
+.photo-grid-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 800px) {
+  .photo-grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .photo-grid-3col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- 푸터 ---------- */
+footer.site-footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-accent-light);
+  margin-top: 40px;
+}
+
+.footer-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.footer-wrap a { color: var(--color-muted); }
+
+.copyright {
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ---------- 반응형 ---------- */
+@media (max-width: 600px) {
+  .hero { flex-direction: column; align-items: flex-start; }
+  nav.main-nav ul { gap: 14px; }
+}

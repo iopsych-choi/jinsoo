@@ -276,12 +276,12 @@ main strong {
 
 .person-card { text-align: left; }
 .person-card img {
-  width: 100%;
+  width: 75%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--radius);
   background: var(--color-accent-light);
-  margin-bottom: 8px;
+  margin: 0 0 8px;
 }
 .person-card .name { font-weight: 600; }
 .person-card .role { color: var(--color-muted); font-size: 0.9rem; }
